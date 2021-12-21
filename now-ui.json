@@ -1,0 +1,58 @@
+{
+  "components": {
+    "x-603859-pl4-charts4u": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "My Component",
+        "icon": "document-outline",
+        "description": "A description of my component",
+        "category": "primitives"
+      },
+      "properties": [
+        {
+          "name": "table",
+          "label": "Table",
+          "fieldType": "table_name",
+          "readOnly": false,
+          "defaultValue": "task",
+          "description": "Table to render",
+          "selectable": false,
+          "valueType": "string",
+          "mandatory": true
+        },
+        {
+          "name": "query",
+          "label": "Filter",
+          "fieldType": "condition_string",
+          "readOnly": false,
+          "typeMetadata": {
+            "table": "@table"
+          },
+          "defaultValue": "active=true",
+          "description": "Encoded query string to filter results by",
+          "selectable": false,
+          "valueType": "string",
+          "mandatory": false
+        },
+        {
+          "name": "refreshRequested",
+          "label": "Refresh requested",
+          "fieldType": "json",
+          "readOnly": false,
+          "typeMetadata": {
+            "schema": {
+              "type": "object"
+            }
+          },
+          "defaultValue": "",
+          "description": "An object containing a timestamp that can be passed down to trigger a refresh",
+          "selectable": false,
+          "valueType": "string",
+          "mandatory": false
+        }
+      ]
+    }
+  },
+  "scopeName": "x_603859_charts4u"
+}
